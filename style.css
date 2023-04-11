@@ -1,0 +1,180 @@
+:root {
+    /* Primary */
+    --Violet:       hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --Soft-Magenta-2: hsl(300, 69%, 50%);
+
+    --width:        hsl(0, 0%, 100%);
+    --width-2:      hsl(0, 0%, 90%);
+
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+/* Globale Style */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+}
+@media (min-width: 375px) {
+    body {
+        background: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-color: var(--Violet);
+        background-size: cover;
+
+    }
+}
+@media (min-width: 1000px) {
+    body {
+        background: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-color: var(--Violet);
+
+    }
+}
+/* Main */
+main {
+    margin: 2rem 2.3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.8rem;
+}
+@media (min-width: 1000px) {
+    main {
+        align-items: flex-start;
+        margin: 2rem 4.5rem 2rem;
+    }
+}
+
+/* Logo ********************************** */
+.logo-div img {
+    width: 8rem;
+}
+@media (min-width: 1000px) {
+    .logo-div img {
+        width: 13.5rem;
+    }
+}
+
+/* Image And Content ********************* */
+.img-and-content {
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+}
+@media (min-width: 900px) {
+    .img-and-content {
+        display: grid;
+        grid-template-columns: 55% 35%;
+
+    }
+}
+
+/* Content ******************************* */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+@media (min-width: 1000px) {
+    .content  {
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+}
+/* Header -------------------------------- */
+.content .header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: var(--fw-600);
+    color: var(--width);
+}
+@media (min-width: 1000px) {
+    .content .header {
+        font-size: 2.5rem;
+    }
+}
+/* Paragraph ----------------------------- */
+.content .paragraph {
+    font-weight: var(--fw-400);
+    line-height: 1.5rem;
+    color: var(--width-2);
+}
+/* Register Button ----------------------- */
+.content .register-button {    
+    font-weight: var(--fw-400);
+    line-height: 2rem;
+    color: var(--Violet);
+
+    border: none;
+    border-radius: 2rem;
+    padding: .3rem 5rem ;
+    width: fit-content;
+
+    box-shadow: 2px 2px 5px black;
+}
+.content .register-button:hover {
+    color: var(--width);
+    background-color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+@media (min-width: 1000px) {
+    .content .register-button   {
+        font-size: 1.2rem;
+        padding: .7rem 4rem ;
+    }
+}
+
+/* Bottom Icons ************************** */
+/* Icon Div ----------------------------- */
+.icon-div {
+    display: flex;
+    gap: 1rem;
+}
+@media (min-width: 1000px) {
+    .icon-div  {
+        align-self: flex-end;
+    }
+}
+/* Icons --------------------------------- */
+.icon-div i {
+    width: 2.5rem;
+    font-size: 1.5rem;
+    padding-top: .3rem;
+
+    text-align: center;
+    
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}
+.icon-div i:hover {
+    border: 1px solid var(--Soft-Magenta-2);
+    color: var(--Soft-Magenta-2);
+    cursor: pointer;
+}
